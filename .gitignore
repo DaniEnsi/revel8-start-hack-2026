@@ -1,0 +1,34 @@
+# Local credentials and runtime configuration
+.env
+.env.*
+!.env.example
+!.env.compose.example
+control-room/.env
+control-room/.env.*
+!control-room/.env.example
+
+# Runtime agent state and evidence with submitted material
+agent/traces/
+agent/playbook.json
+agent/eval_sessions.json
+agent/flow-runs/
+.revel8/
+skill-observations/
+
+# Python caches and virtual environments
+__pycache__/
+*.py[cod]
+.venv/
+sidecar/.venv/
+
+# JavaScript dependencies and build output
+node_modules/
+.next/
+.turbo/
+.pnpm-store/
+dist/
+out/
+
+# OS and local logs
+.DS_Store
+*.log
