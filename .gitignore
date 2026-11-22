@@ -1,4 +1,5 @@
 # Local credentials and runtime configuration
+Key for team 7.pdf
 .env
 .env.*
 !.env.example
