@@ -128,7 +128,7 @@ The offline browser test blocks upstream requests, opens the outcome-first sampl
 - Verified duplicate `POST /sessions` returns the same session with zero touches.
 - Actual four-contact practice flow completed: email → SMS → phone call → debrief email.
 
-See [differentiators](research/revel8-differentiators.md) and [revealed-target OSINT](research/revealed-eval-osint-dossiers.md) for the underlying evidence and limitations.
+See [differentiators](research/revel8-differentiators.md) for the underlying evidence and limitations. Revealed-target dossiers stay local.
 
 ## Team documents
 
@@ -143,7 +143,7 @@ See [differentiators](research/revel8-differentiators.md) and [revealed-target O
 ## Security and contribution hygiene
 
 - `.env`, `Key for team 7.pdf`, traces, playbook, eval manifests, local secrets, and runtime state are excluded by `.gitignore`.
-- The GitHub repository is **private for now**. Do not make it public without an explicit owner decision and a fresh secret audit.
+- The GitHub repository is public.
 - Keep API keys, passwords, recipient identities, and submitted form values out of commits, issues, screenshots, videos, and logs.
 - Do not create pull requests or merges without verifying the final worktree and test suite.
 

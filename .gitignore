@@ -11,8 +11,10 @@ control-room/.env.*
 # Runtime agent state and evidence with submitted material
 agent/traces/
 agent/playbook.json
+agent/playbook.json.lock
 agent/eval_sessions.json
 agent/flow-runs/
+research/revealed-eval-osint-dossiers.md
 .revel8/
 skill-observations/
 
