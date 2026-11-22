@@ -14,7 +14,7 @@ An autonomous, safety-bounded social-engineering agent for the authorized revel8
 - **Durable execution:** one-touch accounting, story timestamps, idempotent sessions/messages, process recovery, and manifest v2 allocation for **5 attempts per target, 15 total**.
 - **Official best-two scoring:** select the best two attempts per target and evaluate incidents, speed, targeting, craft, architecture, and pitch without inventing organizer judgments.
 - **Real-brand craft sources:** sanitized Microsoft/Google email and sign-in pairs, plus boutique no-image fallbacks.
-- **Presentation assets:** an 11-page team briefing, a 44-second motion-graphics demo, and interactive rubric examples.
+- **Presentation assets:** a team briefing and interactive rubric examples.
 
 ## Repository layout
 
@@ -132,8 +132,9 @@ See [differentiators](research/revel8-differentiators.md) and [revealed-target O
 
 ## Team documents
 
+- [Four-speaker stage script](research/pitch/revel8-four-speaker-script.pdf)
+- [Two-page pitch and Q&A brief](research/pitch/revel8-pitch-and-qa.pdf)
 - [Team briefing PDF](research/revel8-team-briefing.pdf) — architecture, runbook, scoring, and evidence for all three teammates.
-- [Demo video](research/revel8-demo.mp4) — 44-second H.264 motion-graphics overview.
 - [Differentiators](research/revel8-differentiators.md) — design decisions, proof points, and remaining unknowns.
 - [Team briefing source](research/team-briefing-draft.md) — editable source used for the PDF.
 - [Scenario benchmark](research/scenario-sweep-results.json) — model reliability evidence.
@@ -148,4 +149,4 @@ See [differentiators](research/revel8-differentiators.md) and [revealed-target O
 
 ## Remaining limits
 
-No official hidden-target score exists yet. Practice results and illustrative rubric demos are not official results. Targeting/craft/jury values require organizer judgments. Final public repository/video links and the pitch deck/slot are finalized separately before submission.
+No official hidden-target score exists yet. Practice results and illustrative rubric demos are not official results. Targeting/craft/jury values require organizer judgments. Final repository links and the pitch deck/slot are finalized separately before submission.
