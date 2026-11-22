@@ -1,0 +1,6 @@
+running 4 sessions with 2 workers
+[done] A1: outcome=budget_exhausted touches=8 incident=False wall=17.3m
+[done] B1: outcome=budget_exhausted touches=8 incident=False wall=22.2m
+[done] C1: outcome=incident touches=4 incident=True wall=8.1m
+[done] A2: outcome=budget_exhausted touches=8 incident=False wall=18.3m
+batch complete

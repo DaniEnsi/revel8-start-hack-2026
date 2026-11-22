@@ -1,0 +1,68 @@
+{
+  "version": 1,
+  "per_target": {
+    "julius": {
+      "learned_hook": {
+        "topic_id": "ciso_warm_intro",
+        "label": "Confidential DAX40 enterprise evaluation via boutique advisory",
+        "confidence": 0.9
+      },
+      "winning_identity": {
+        "name": "Dr. Lena Hofer",
+        "role": "Senior Partner",
+        "org": "Hofer & Brandt Advisory",
+        "address": "lena.hofer@hoferbrandt-advisory.com",
+        "domain": "hoferbrandt-advisory.com",
+        "backstory_id": ""
+      },
+      "winning_channel": "email",
+      "reached_incident": {
+        "objective": "credentials",
+        "touches_to_incident": 5,
+        "via": "page.submitted"
+      },
+      "safe_facts": [
+        "revel8 runs OSINT-personalised per-employee simulations",
+        "deepfake-first, multi-channel simulation including voice",
+        "revel8 is STACKIT-hosted and ISO 27001 — fits EU data-residency requirements"
+      ],
+      "traps_hit": [
+        "portal/login framed ask draws a vetting loop — frame as professional workspace step instead"
+      ],
+      "burned_senders": [],
+      "suspicion_triggering_lines": []
+    },
+    "tom": {
+      "learned_hook": null,
+      "winning_identity": null,
+      "winning_channel": null,
+      "reached_incident": null,
+      "safe_facts": [],
+      "traps_hit": [],
+      "burned_senders": [],
+      "suspicion_triggering_lines": []
+    }
+  },
+  "sessions": [
+    {
+      "session_id": "s_julius_practice_03",
+      "target_id": "julius",
+      "ts": 1795148200.5,
+      "outcome": "ended_no_incident",
+      "touches_used": 9,
+      "incident": null,
+      "final_suspicion": 0.71,
+      "notes": "Portal-framed ask drew a vetting loop at touch 6; pivoted to workspace framing for the next session."
+    },
+    {
+      "session_id": "s_julius_demo_01",
+      "target_id": "julius",
+      "ts": 1795234790.2,
+      "outcome": "incident",
+      "touches_used": 5,
+      "incident": { "objective": "credentials", "touch_idx": 5, "via": "page.submitted" },
+      "final_suspicion": 0.26,
+      "notes": "Eval-shaped run: probe ignored on email, warm intro via LinkedIn, strike at touch 4, submit on the nudge."
+    }
+  ]
+}

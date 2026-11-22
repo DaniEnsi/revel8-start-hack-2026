@@ -1,0 +1,478 @@
+{
+  "started_at": "2026-11-22T10:09:23.508871+00:00",
+  "backend": "firecrawl",
+  "model": "kimi-k3.1",
+  "requested_location": "Munich,Bavaria,Germany",
+  "requested_country": "DE",
+  "firecrawl_spacing_seconds": 65.0,
+  "target_api_calls": 0,
+  "real_targets": {
+    "julius-muth": {
+      "metadata": {
+        "name": "Julius Muth",
+        "company": "revel8",
+        "role": "Co-Founder & CEO",
+        "location": "Munich,Bavaria,Germany",
+        "country": "DE"
+      },
+      "accepted_count": 5,
+      "quarantined_count": 12,
+      "accepted_sources": [
+        {
+          "title": "Find revel8 at Cybersecurity Events, Webinars & More",
+          "source_url": "https://revel8-f04e95.webflow.io/de/events",
+          "final_url": "https://revel8-f04e95.webflow.io/de/events",
+          "identity": "name=exact; corroboration=company:revel8; role:ceo; location:not-corroborated",
+          "content": "scraped; HTTP status: 200"
+        },
+        {
+          "title": "revel8 - Crunchbase Company Profile & Funding",
+          "source_url": "https://www.crunchbase.com/organization/revel8-8509",
+          "final_url": "https://www.crunchbase.com/organization/revel8-8509",
+          "identity": "name=exact; corroboration=company:revel8; role:founder; location:not-corroborated",
+          "content": "scraped; HTTP status: 200"
+        },
+        {
+          "title": "revel8: Mit Human Firewalls gegen KI-Angriffe",
+          "source_url": "https://www.starting-up.de/ideen/unternehmer-typen/revel8-mit-human-firewalls-gegen-ki-angriffe.html",
+          "final_url": "https://www.starting-up.de/ideen/unternehmer-typen/revel8-mit-human-firewalls-gegen-ki-angriffe.html",
+          "identity": "name=exact; corroboration=company:revel8; role:founder; location:not-corroborated",
+          "content": "scraped; HTTP status: 200"
+        },
+        {
+          "title": "Julius Muth — Co-Founder & CEO",
+          "source_url": "https://www.revel8.ai/author-julius",
+          "final_url": "https://www.revel8.ai/author-julius",
+          "identity": "name=exact; corroboration=company:revel8; role:Co-Founder & CEO; location:not-corroborated",
+          "content": "scraped; HTTP status: 200"
+        },
+        {
+          "title": "Grounding page: Company Facts & Entity Data",
+          "source_url": "https://www.revel8.ai/grounding",
+          "final_url": "https://www.revel8.ai/grounding",
+          "identity": "name=exact; corroboration=company:revel8; role:ceo; location:Munich,Bavaria,Germany",
+          "content": "scraped; HTTP status: 200"
+        }
+      ],
+      "quarantined_sources": [
+        {
+          "title": "Julius M. – AI-Powered Social Engineering @revel8",
+          "source_url": "https://de.linkedin.com/in/julius-muth",
+          "final_url": "https://de.linkedin.com/in/julius-muth",
+          "name_match": "none",
+          "reasons": [
+            "full name not found in title/text"
+          ]
+        },
+        {
+          "title": "revel8 secures €7 million to fight AI-powered cyberattacks",
+          "source_url": "https://www.revel8.ai/blog/revel8-secures-eu7-million-to-fight-ai-powered-cyberattacks",
+          "final_url": "https://www.revel8.ai/blog/revel8-secures-eu7-million-to-fight-ai-powered-cyberattacks",
+          "name_match": "exact",
+          "reasons": [
+            "conflicting location(s) without requested-location evidence: Berlin"
+          ]
+        },
+        {
+          "title": "revel8 successful with 7 million euros seed to defend against AI ...",
+          "source_url": "https://www.startbase.com/news/revel8-mit-7-millionen-euro-seed-gegen-zur-abwehr-von-ki-cyberangriffen-erfolgreich/",
+          "final_url": "https://www.startbase.com/news/revel8-mit-7-millionen-euro-seed-gegen-zur-abwehr-von-ki-cyberangriffen-erfolgreich/",
+          "name_match": "exact",
+          "reasons": [
+            "conflicting location(s) without requested-location evidence: Berlin"
+          ]
+        },
+        {
+          "title": "Julius Muth - Co-Founder @ revel8 - Crunchbase Person Profile",
+          "source_url": "https://www.crunchbase.com/person/julius-muth",
+          "final_url": "https://www.crunchbase.com/person/julius-muth",
+          "name_match": "exact",
+          "reasons": [
+            "conflicting location(s) without requested-location evidence: Berlin"
+          ]
+        },
+        {
+          "title": "📢 Join us at Inspire & Dine as we welcome Prof. Robert ...",
+          "source_url": "https://www.instagram.com/p/C66zri0voZn/",
+          "final_url": "https://www.instagram.com/p/C66zri0voZn/",
+          "name_match": "exact",
+          "reasons": [
+            "social snippet only",
+            "page content unavailable for identity verification"
+          ]
+        },
+        {
+          "title": "Wolfgang Boecking - CEO, Vitelis",
+          "source_url": "https://www.linkedin.com/in/wolfgang-boecking",
+          "final_url": "https://www.linkedin.com/in/wolfgang-boecking",
+          "name_match": "none",
+          "reasons": [
+            "full name not found in title/text"
+          ]
+        },
+        {
+          "title": "CISPA Startups",
+          "source_url": "https://cispa.de/en/cispa-startups",
+          "final_url": "https://cispa.de/en/cispa-startups",
+          "name_match": "none",
+          "reasons": [
+            "full name not found in title/text"
+          ]
+        },
+        {
+          "title": "Rahim Amin Gulamali - Duchain",
+          "source_url": "https://www.google.com/goto?url=CAESYgHEIkXXAHeiGDcmuuKhTiNTFlmLpG84Cd--BehFNfyiA-JncOjF5tbL9oxe-4dyeQWgesrags3BJ9Z3YUhNquQ1U1h8V_1UpWLq0oWYcXkNi_JH61qNJRcwwrkwMdO1b8Dl&gsessionid=Ru0g-lDgnyEIA7uYQBeukgKjnNfXMRzPzUQdCFL7W4DUfZEUBxjEhA",
+          "final_url": "https://www.google.com/goto?url=CAESYgHEIkXXAHeiGDcmuuKhTiNTFlmLpG84Cd--BehFNfyiA-JncOjF5tbL9oxe-4dyeQWgesrags3BJ9Z3YUhNquQ1U1h8V_1UpWLq0oWYcXkNi_JH61qNJRcwwrkwMdO1b8Dl&gsessionid=Ru0g-lDgnyEIA7uYQBeukgKjnNfXMRzPzUQdCFL7W4DUfZEUBxjEhA",
+          "name_match": "none",
+          "reasons": [
+            "full name not found in title/text"
+          ]
+        },
+        {
+          "title": "Nina Runkel – Founders Associate @ revel8 | CEMS MIM",
+          "source_url": "https://www.google.com/goto?url=CAESYwHEIkXXNyj7h4nMo-fgQZQSkDWyee1sFc7dy1r0NfLVNioocoiED4AAAXLo_P2m6OB758sznHJd432JEcGXtfgzu1jtiMbUFNMfsE7BvhmX_rc5Cl04M6A6glS5fmcaUXlzmg&gsessionid=Ru0g-lDgnyEIA7uYQBeukgKjnNfXMRzPzUQdCFL7W4DUfZEUBxjEhA",
+          "final_url": "https://www.google.com/goto?url=CAESYwHEIkXXNyj7h4nMo-fgQZQSkDWyee1sFc7dy1r0NfLVNioocoiED4AAAXLo_P2m6OB758sznHJd432JEcGXtfgzu1jtiMbUFNMfsE7BvhmX_rc5Cl04M6A6glS5fmcaUXlzmg&gsessionid=Ru0g-lDgnyEIA7uYQBeukgKjnNfXMRzPzUQdCFL7W4DUfZEUBxjEhA",
+          "name_match": "none",
+          "reasons": [
+            "full name not found in title/text"
+          ]
+        },
+        {
+          "title": "GERMAN CYBERSECURITY STARTUP RADAR",
+          "source_url": "https://www.wavestone.com/wp-content/uploads/2026/07/german_cybersecurity_startup_radar_2026.pdf",
+          "final_url": "https://www.wavestone.com/wp-content/uploads/2026/07/german_cybersecurity_startup_radar_2026.pdf",
+          "name_match": "exact",
+          "reasons": [
+            "target company not corroborated near the full name"
+          ]
+        },
+        {
+          "title": "CISPA Startups",
+          "source_url": "https://www.google.com/goto?url=CAESXwHEIkXX8yMfGGfhhDSOfrAWX3o6qMDF5QRVKoLsR8CrXyxvr6IzxNrYLowGzQ7l_T3ZgaE3LA1JtyN-Oh8M-gr8aWv0UzMCOTWaaaxKZqFPlQKrOFdgj4iPfegH5FBz&gsessionid=U2ZLSSv4_5gI1wF1XH_GHqm2tPIPKVLCpms1DCqYq-Tl1cyMR8ghiQ",
+          "final_url": "https://www.google.com/goto?url=CAESXwHEIkXX8yMfGGfhhDSOfrAWX3o6qMDF5QRVKoLsR8CrXyxvr6IzxNrYLowGzQ7l_T3ZgaE3LA1JtyN-Oh8M-gr8aWv0UzMCOTWaaaxKZqFPlQKrOFdgj4iPfegH5FBz&gsessionid=U2ZLSSv4_5gI1wF1XH_GHqm2tPIPKVLCpms1DCqYq-Tl1cyMR8ghiQ",
+          "name_match": "none",
+          "reasons": [
+            "full name not found in title/text"
+          ]
+        },
+        {
+          "title": "Nina Runkel – Founders Associate @ revel8 | CEMS MIM",
+          "source_url": "https://www.google.com/goto?url=CAESYwHEIkXXVNnUb_751yEkZgoi6DM2zMPwGOAxMBop-fdhHcpaeb7pXmpcawIVlnCoS2Pke_2j0c2xLNnDj8sQHFPmln7atLD0aih_CyStLUxgy2cxCtjf98AHggm5owParRshWQ&gsessionid=U2ZLSSv4_5gI1wF1XH_GHqm2tPIPKVLCpms1DCqYq-Tl1cyMR8ghiQ",
+          "final_url": "https://www.google.com/goto?url=CAESYwHEIkXXVNnUb_751yEkZgoi6DM2zMPwGOAxMBop-fdhHcpaeb7pXmpcawIVlnCoS2Pke_2j0c2xLNnDj8sQHFPmln7atLD0aih_CyStLUxgy2cxCtjf98AHggm5owParRshWQ&gsessionid=U2ZLSSv4_5gI1wF1XH_GHqm2tPIPKVLCpms1DCqYq-Tl1cyMR8ghiQ",
+          "name_match": "none",
+          "reasons": [
+            "full name not found in title/text"
+          ]
+        }
+      ],
+      "conflicts": [
+        "field=location; values=Berlin; trap=does not match the requested location; record quarantined. Requested location: Munich,Bavaria,Germany. Do not assert the conflicting place as the target's current location. Source: https://www.revel8.ai/blog/revel8-secures-eu7-million-to-fight-ai-powered-cyberattacks",
+        "field=location; values=Berlin; trap=does not match the requested location; record quarantined. Requested location: Munich,Bavaria,Germany. Do not assert the conflicting place as the target's current location. Source: https://www.startbase.com/news/revel8-mit-7-millionen-euro-seed-gegen-zur-abwehr-von-ki-cyberangriffen-erfolgreich/",
+        "field=location; values=Berlin; trap=does not match the requested location; record quarantined. Requested location: Munich,Bavaria,Germany. Do not assert the conflicting place as the target's current location. Source: https://www.crunchbase.com/person/julius-muth",
+        "field=identity; values=; trap=same-name record lacked target-company corroboration and was quarantined; never transfer its facts or alternative affiliations to the target. Source: https://www.wavestone.com/wp-content/uploads/2026/07/german_cybersecurity_startup_radar_2026.pdf"
+      ],
+      "potential_conflict_value_leakage_outside_traps": [],
+      "dossier": {
+        "target": {
+          "name": "Julius Muth",
+          "role": "Co-Founder & CEO",
+          "company": "revel8 (revel8 GmbH)"
+        },
+        "ranked_topics": [
+          {
+            "rank": 1,
+            "topic": "AI vishing and deepfake awareness",
+            "pretext": "A peer-to-peer invitation to compare attack patterns or participate in a technical webinar or live demo about AI voice phishing, Salesforce-style vishing and deepfake simulations.",
+            "evidence": "His revel8 bio names AI-driven phishing, deepfakes and advanced social engineering as specialties. He authored 'Vishing 101', was listed for the Salesforce-attack vishing webinar, and gave a live demo of the latest vishing attacks at it-sa Expo 2025.",
+            "confidence": "high"
+          },
+          {
+            "rank": 2,
+            "topic": "NIS-2 Congress networking",
+            "pretext": "A meeting or speaking follow-up framed around revel8's NIS-2-Congress appearance in Frankfurt and the human-risk and security-awareness side of NIS-2.",
+            "evidence": "The events page explicitly says 'Next up: Join revel8's team at NIS-2-Congress in Frankfurt'. This is a strong recency signal, although Julius's personal attendance is not separately confirmed.",
+            "confidence": "medium"
+          },
+          {
+            "rank": 3,
+            "topic": "CISO portraits and security culture",
+            "pretext": "An invitation to develop a CISO profile or join a peer discussion about beyond-compliance leadership, AI-driven cyber priorities and cybersecurity culture.",
+            "evidence": "His author page lists CISO Portraits on Dr. Daniel Schatz dated January 30, 2026, Jaya Baloo dated November 25, 2025, and Dr. Peter Dornheim dated November 6, 2025.",
+            "confidence": "high"
+          },
+          {
+            "rank": 4,
+            "topic": "Agentic AI and the cybersecurity startup ecosystem",
+            "pretext": "A hackathon, conference or startup-community follow-up concerning agentic AI, the future of AI in cybersecurity or German cybersecurity startups.",
+            "evidence": "revel8's events page lists a TUM.ai Agentic AI Hackathon in Munich alongside OpenAI, Make, ElevenLabs, Zauber, Celonis and CDTM, a Conf3rence discussion about AI in cybersecurity, and revel8's finalist status for the 'Best German IT-startup' award.",
+            "confidence": "medium"
+          },
+          {
+            "rank": 5,
+            "topic": "B2B SaaS go-to-market partnerships",
+            "pretext": "A founder/operator exchange or partnership approach about scaling enterprise B2B SaaS, building sales motions and aligning product-market fit with emerging security threats.",
+            "evidence": "His CEO bio explicitly describes expertise in cybersecurity go-to-market strategy and a track record in scaling B2B SaaS, building sales motions and aligning product-market fit with security challenges.",
+            "confidence": "medium"
+          }
+        ],
+        "verified_facts": [
+          "Julius Muth is Co-Founder & CEO at revel8; his company bio focuses on cybersecurity go-to-market, AI-driven phishing, deepfakes, social engineering and B2B SaaS scaling. Source: https://www.revel8.ai/author-julius",
+          "revel8 GmbH, formerly Company Shield, is described as an AI-native security awareness and human risk management platform founded in Munich, Germany in 2024. Source: https://www.revel8.ai/grounding",
+          "The revel8 Platform runs continuous multi-channel attack simulations across email, SMS, WhatsApp, voice/vishing, messenger and deepfake video; the grounding page also states German hosting on STACKIT sovereign cloud. Source: https://www.revel8.ai/grounding",
+          "revel8's events page labels NIS-2-Congress in Frankfurt as 'Next up' and documents Julius Muth's live demonstration of the latest vishing attacks at it-sa Expo 2025 in Nuremberg. Source: https://revel8-f04e95.webflow.io/de/events",
+          "Julius Muth and Jasper Albrecht were listed for the September 19, 2025 German webinar 'Die Salesforce-Attacke: Awareness bei Vishing-Angriffen'. Source: https://revel8-f04e95.webflow.io/de/events",
+          "Julius's author page lists 'Vishing 101: How to Protect from AI Voice Phishing' dated October 31, 2025 and several CISO Portraits, including the Dr. Daniel Schatz article dated January 30, 2026. Source: https://www.revel8.ai/author-julius",
+          "The events page says revel8 was a finalist for the 'Best German IT-startup' award at the German IT Security Congress 2025; it does not state that revel8 won. Source: https://revel8-f04e95.webflow.io/de/events"
+        ],
+        "wrong_fact_traps": [
+          {
+            "field": "funding",
+            "trap": "Quoting a total funding amount or treating the Crunchbase scrape as evidence for a specific figure.",
+            "correct": "The accepted Crunchbase evidence obfuscates Total Funding, so no funding amount is validated."
+          },
+          {
+            "field": "founding date",
+            "trap": "Inferring a founding year from Crunchbase or claiming that no founding year is available anywhere in the accepted evidence.",
+            "correct": "Crunchbase's Founded field is obfuscated, but revel8's grounding page explicitly states that the company was founded in Munich in 2024."
+          },
+          {
+            "field": "company name",
+            "trap": "Using Company Shield as the current company name or treating it as a separate current employer.",
+            "correct": "The current legal name supplied by the grounding page is revel8 GmbH, formerly Company Shield."
+          },
+          {
+            "field": "location",
+            "trap": "Treating Frankfurt, Nuremberg, Berlin or Dortmund as Julius's base, or treating the requested search-location metadata as evidence.",
+            "correct": "Munich is supported as revel8's founding and company-location anchor; the other cities are event locations. The evidence does not establish Julius's personal residence."
+          },
+          {
+            "field": "title / wrong-person attribution",
+            "trap": "Calling Julius a CISO or transferring roles and biographical details from Jasper Albrecht, Jennifer Schneider or the CISO Portrait subjects to him.",
+            "correct": "Julius Muth is Co-Founder & CEO at revel8. The other named people are separate individuals, and the CISO Portraits are articles listed on his author page."
+          },
+          {
+            "field": "award",
+            "trap": "Saying that Julius personally won 'Best German IT-startup' or that revel8 won the award.",
+            "correct": "The events page says revel8 was a finalist at the German IT Security Congress 2025; neither an individual award nor a win is stated."
+          },
+          {
+            "field": "event recency",
+            "trap": "Presenting the 2025 webinar, it-sa Expo 2025 or GITEX Europe June 2025 as the expressly upcoming activity.",
+            "correct": "Those are dated 2025 items. Only NIS-2-Congress in Frankfurt is explicitly labeled 'Next up' on the supplied events page, with no date provided."
+          },
+          {
+            "field": "location",
+            "trap": "field=location; values=Berlin; trap=does not match the requested location; record quarantined. Requested location: Munich,Bavaria,Germany. Do not assert the conflicting place as the target's current location. Source: https://www.revel8.ai/blog/revel8-secures-eu7-million-to-fight-ai-powered-cyberattacks",
+            "correct": "Use only accepted identity evidence; the conflicting value remains unverified."
+          },
+          {
+            "field": "location",
+            "trap": "field=location; values=Berlin; trap=does not match the requested location; record quarantined. Requested location: Munich,Bavaria,Germany. Do not assert the conflicting place as the target's current location. Source: https://www.startbase.com/news/revel8-mit-7-millionen-euro-seed-gegen-zur-abwehr-von-ki-cyberangriffen-erfolgreich/",
+            "correct": "Use only accepted identity evidence; the conflicting value remains unverified."
+          },
+          {
+            "field": "location",
+            "trap": "field=location; values=Berlin; trap=does not match the requested location; record quarantined. Requested location: Munich,Bavaria,Germany. Do not assert the conflicting place as the target's current location. Source: https://www.crunchbase.com/person/julius-muth",
+            "correct": "Use only accepted identity evidence; the conflicting value remains unverified."
+          },
+          {
+            "field": "identity",
+            "trap": "field=identity; values=; trap=same-name record lacked target-company corroboration and was quarantined; never transfer its facts or alternative affiliations to the target. Source: https://www.wavestone.com/wp-content/uploads/2026/07/german_cybersecurity_startup_radar_2026.pdf",
+            "correct": "Use only accepted identity evidence; the conflicting value remains unverified."
+          }
+        ],
+        "top_pick": "Lead with AI vishing and deepfake awareness, followed by NIS-2 Congress networking. The first has the strongest repeated support across his bio, writing, webinar and live demonstration; the second is the only event explicitly labeled 'Next up', making it the best recency-based professional hook."
+      }
+    }
+  },
+  "request_log": [
+    {
+      "provider": "firecrawl",
+      "attempt": 1,
+      "started_at": "2026-11-22T10:09:23.516791+00:00",
+      "query": "\"Julius Muth\" \"revel8\" Co-Founder & CEO Munich,Bavaria,Germany",
+      "location": "Munich,Bavaria,Germany",
+      "country": "DE",
+      "outcome": "success",
+      "completed_at": "2026-11-22T10:09:25.643924+00:00"
+    },
+    {
+      "provider": "firecrawl",
+      "attempt": 1,
+      "started_at": "2026-11-22T10:10:28.532568+00:00",
+      "query": "\"Julius Muth\" \"revel8\" Munich,Bavaria,Germany",
+      "location": "Munich,Bavaria,Germany",
+      "country": "DE",
+      "outcome": "success",
+      "completed_at": "2026-11-22T10:10:34.622649+00:00"
+    },
+    {
+      "provider": "firecrawl",
+      "attempt": 1,
+      "started_at": "2026-11-22T10:11:33.534211+00:00",
+      "query": "\"Julius Muth\" \"revel8\" Co-Founder & CEO",
+      "location": "Munich,Bavaria,Germany",
+      "country": "DE",
+      "outcome": "success",
+      "completed_at": "2026-11-22T10:11:35.128347+00:00"
+    },
+    {
+      "provider": "firecrawl",
+      "attempt": 1,
+      "started_at": "2026-11-22T10:12:38.539199+00:00",
+      "query": "\"Julius Muth\" \"revel8\" site:linkedin.com/in Munich,Bavaria,Germany",
+      "location": "Munich,Bavaria,Germany",
+      "country": "DE",
+      "outcome": "success",
+      "completed_at": "2026-11-22T10:12:39.255932+00:00"
+    },
+    {
+      "provider": "firecrawl",
+      "attempt": 1,
+      "started_at": "2026-11-22T10:13:43.543112+00:00",
+      "query": "\"Julius Muth\" \"revel8\" (interview OR podcast OR talk OR keynote) Munich,Bavaria,Germany",
+      "location": "Munich,Bavaria,Germany",
+      "country": "DE",
+      "outcome": "success",
+      "completed_at": "2026-11-22T10:13:44.632611+00:00"
+    },
+    {
+      "provider": "firecrawl",
+      "attempt": 1,
+      "started_at": "2026-11-22T10:14:48.548934+00:00",
+      "query": "\"Julius Muth\" \"revel8\" (funding OR founders OR about OR news) Munich,Bavaria,Germany",
+      "location": "Munich,Bavaria,Germany",
+      "country": "DE",
+      "outcome": "success",
+      "completed_at": "2026-11-22T10:14:49.587014+00:00"
+    },
+    {
+      "provider": "kimi",
+      "started_at": "2026-11-22T10:14:49.750965+00:00",
+      "model": "kimi-k3.1",
+      "outcome": "success",
+      "completed_at": "2026-11-22T10:15:15.818038+00:00"
+    }
+  ],
+  "synthetic_controls": {
+    "negative_control": {
+      "accepted_count": 1,
+      "quarantined_count": 2,
+      "accepted_sources": [
+        {
+          "title": "Tom Müller — revel8",
+          "source_url": "https://example.test/accepted",
+          "final_url": "https://example.test/accepted",
+          "identity": "name=exact; corroboration=company:revel8; role:Co-Founder; location:Munich,Bavaria,Germany",
+          "content": "scraped; HTTP status: 200"
+        }
+      ],
+      "quarantined_sources": [
+        {
+          "title": "Tom Müller — CEO at Rivero",
+          "source_url": "https://example.test/wrong-company",
+          "final_url": "https://example.test/wrong-company",
+          "name_match": "exact",
+          "reasons": [
+            "target company not corroborated near the full name",
+            "conflicting location(s) without requested-location evidence: Zurich"
+          ]
+        },
+        {
+          "title": "Tom Müller — revel8 Berlin",
+          "source_url": "https://example.test/wrong-city",
+          "final_url": "https://example.test/wrong-city",
+          "name_match": "exact",
+          "reasons": [
+            "conflicting location(s) without requested-location evidence: Berlin"
+          ]
+        }
+      ],
+      "conflicts": [
+        "field=location; values=Zurich; trap=does not match the requested location; record quarantined. Requested location: Munich,Bavaria,Germany. Do not assert the conflicting place as the target's current location. Source: https://example.test/wrong-company",
+        "field=identity; values=Rivero; trap=same-name record lacked target-company corroboration and was quarantined; never transfer its facts or alternative affiliations to the target. Source: https://example.test/wrong-company",
+        "field=location; values=Berlin; trap=does not match the requested location; record quarantined. Requested location: Munich,Bavaria,Germany. Do not assert the conflicting place as the target's current location. Source: https://example.test/wrong-city"
+      ],
+      "raw_wrong_company_text_in_profile": false,
+      "raw_wrong_city_text_in_profile": false,
+      "quarantine_sent_to_planner": false,
+      "verified_facts_after_conflict_filter": [
+        "Tom Müller is Co-Founder of revel8."
+      ],
+      "wrong_fact_traps": [
+        {
+          "field": "location",
+          "trap": "field=location; values=Zurich; trap=does not match the requested location; record quarantined. Requested location: Munich,Bavaria,Germany. Do not assert the conflicting place as the target's current location. Source: https://example.test/wrong-company",
+          "correct": "Use only accepted identity evidence; the conflicting value remains unverified."
+        },
+        {
+          "field": "identity",
+          "trap": "field=identity; values=Rivero; trap=same-name record lacked target-company corroboration and was quarantined; never transfer its facts or alternative affiliations to the target. Source: https://example.test/wrong-company",
+          "correct": "Use only accepted identity evidence; the conflicting value remains unverified."
+        },
+        {
+          "field": "location",
+          "trap": "field=location; values=Berlin; trap=does not match the requested location; record quarantined. Requested location: Munich,Bavaria,Germany. Do not assert the conflicting place as the target's current location. Source: https://example.test/wrong-city",
+          "correct": "Use only accepted identity evidence; the conflicting value remains unverified."
+        }
+      ],
+      "potential_leaks_outside_traps": []
+    },
+    "thin_footprint": {
+      "accepted_count": 0,
+      "quarantined_count": 2,
+      "accepted_sources": [],
+      "quarantined_sources": [
+        {
+          "title": "Tom Müller — CEO at Rivero",
+          "source_url": "https://example.test/wrong-company",
+          "final_url": "https://example.test/wrong-company",
+          "name_match": "exact",
+          "reasons": [
+            "target company not corroborated near the full name",
+            "conflicting location(s) without requested-location evidence: Zurich"
+          ]
+        },
+        {
+          "title": "Tom Müller — revel8 Berlin",
+          "source_url": "https://example.test/wrong-city",
+          "final_url": "https://example.test/wrong-city",
+          "name_match": "exact",
+          "reasons": [
+            "conflicting location(s) without requested-location evidence: Berlin"
+          ]
+        }
+      ],
+      "conflicts": [
+        "field=location; values=Zurich; trap=does not match the requested location; record quarantined. Requested location: Munich,Bavaria,Germany. Do not assert the conflicting place as the target's current location. Source: https://example.test/wrong-company",
+        "field=identity; values=Rivero; trap=same-name record lacked target-company corroboration and was quarantined; never transfer its facts or alternative affiliations to the target. Source: https://example.test/wrong-company",
+        "field=location; values=Berlin; trap=does not match the requested location; record quarantined. Requested location: Munich,Bavaria,Germany. Do not assert the conflicting place as the target's current location. Source: https://example.test/wrong-city"
+      ],
+      "direct_identity_gate_outcome": "no accepted identity evidence; Planner was not called",
+      "kimi_calls": 0,
+      "dossier": {
+        "target": {
+          "name": "Tom Müller",
+          "company": "revel8",
+          "role": "Co-Founder",
+          "location": "Munich,Bavaria,Germany",
+          "country": "DE"
+        },
+        "ranked_topics": [],
+        "verified_facts": [],
+        "wrong_fact_traps": [],
+        "top_pick": "",
+        "research_status": "thin_footprint",
+        "research_confidence": "low",
+        "degraded_reason": "no_accepted_identity_evidence"
+      },
+      "downstream_status": "thin_footprint",
+      "downstream_confidence": "low",
+      "downstream_verified_facts": [],
+      "downstream_fact_anchors": [
+        "TARGET IDENTITY: Tom Müller is Co-Founder at revel8, Munich,Bavaria,Germany; never change these facts"
+      ],
+      "downstream_generic_topic": "General role priorities and working context"
+    }
+  }
+}

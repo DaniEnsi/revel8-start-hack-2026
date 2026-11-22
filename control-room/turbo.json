@@ -1,0 +1,64 @@
+{
+	"$schema": "https://turbo.build/schema.json",
+	"ui": "tui",
+	"globalEnv": [
+		"CONVEX_SELF_HOSTED_URL",
+		"CONVEX_SELF_HOSTED_ADMIN_KEY",
+		"NEXT_PUBLIC_CONVEX_URL",
+		"NEXT_PUBLIC_CONVEX_SITE_URL",
+		"CONVEX_SITE_URL",
+		"BETTER_AUTH_SECRET",
+		"RESEND_API_KEY",
+		"BETTER_AUTH_EMAIL"
+	],
+	"tasks": {
+		"db:generate": {
+			"cache": false
+		},
+		"@x70-monorepo/database#db:generate": {
+			"cache": false
+		},
+		"build": {
+			"dependsOn": ["^build"],
+			"inputs": ["$TURBO_DEFAULT$", ".env*"],
+			"outputs": [".next/**", "!.next/cache/**"]
+		},
+		"@x70-monorepo/app#build": {
+			"dependsOn": ["^build", "@x70-monorepo/database#db:generate"],
+			"inputs": ["$TURBO_DEFAULT$", ".env*"],
+			"outputs": [".next/**", "!.next/cache/**"]
+		},
+		"lint": {
+			"dependsOn": ["^lint"]
+		},
+		"typecheck": {
+			"dependsOn": ["^typecheck"]
+		},
+		"@x70-monorepo/app#typecheck": {
+			"dependsOn": ["@x70-monorepo/database#db:generate", "^typecheck"]
+		},
+		"check-types": {
+			"dependsOn": ["^check-types"]
+		},
+		"@x70-monorepo/app#check-types": {
+			"dependsOn": ["@x70-monorepo/database#db:generate", "^check-types"]
+		},
+		"@x70-monorepo/database#dev:database": {
+			"cache": false,
+			"persistent": true
+		},
+		"@x70-monorepo/database#dev:dashboard": {
+			"cache": false,
+			"persistent": true
+		},
+		"dev": {
+			"dependsOn": ["@x70-monorepo/database#db:generate"],
+			"cache": false,
+			"persistent": true,
+			"with": [
+				"@x70-monorepo/database#dev:database",
+				"@x70-monorepo/database#dev:dashboard"
+			]
+		}
+	}
+}

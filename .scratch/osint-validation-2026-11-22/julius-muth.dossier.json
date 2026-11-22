@@ -1,0 +1,111 @@
+{
+  "target": {
+    "name": "Julius Muth",
+    "role": "Co-Founder & CEO",
+    "company": "revel8 (revel8 GmbH)"
+  },
+  "ranked_topics": [
+    {
+      "rank": 1,
+      "topic": "AI vishing and deepfake awareness",
+      "pretext": "A peer-to-peer invitation to compare attack patterns or participate in a technical webinar or live demo about AI voice phishing, Salesforce-style vishing and deepfake simulations.",
+      "evidence": "His revel8 bio names AI-driven phishing, deepfakes and advanced social engineering as specialties. He authored 'Vishing 101', was listed for the Salesforce-attack vishing webinar, and gave a live demo of the latest vishing attacks at it-sa Expo 2025.",
+      "confidence": "high"
+    },
+    {
+      "rank": 2,
+      "topic": "NIS-2 Congress networking",
+      "pretext": "A meeting or speaking follow-up framed around revel8's NIS-2-Congress appearance in Frankfurt and the human-risk and security-awareness side of NIS-2.",
+      "evidence": "The events page explicitly says 'Next up: Join revel8's team at NIS-2-Congress in Frankfurt'. This is a strong recency signal, although Julius's personal attendance is not separately confirmed.",
+      "confidence": "medium"
+    },
+    {
+      "rank": 3,
+      "topic": "CISO portraits and security culture",
+      "pretext": "An invitation to develop a CISO profile or join a peer discussion about beyond-compliance leadership, AI-driven cyber priorities and cybersecurity culture.",
+      "evidence": "His author page lists CISO Portraits on Dr. Daniel Schatz dated January 30, 2026, Jaya Baloo dated November 25, 2025, and Dr. Peter Dornheim dated November 6, 2025.",
+      "confidence": "high"
+    },
+    {
+      "rank": 4,
+      "topic": "Agentic AI and the cybersecurity startup ecosystem",
+      "pretext": "A hackathon, conference or startup-community follow-up concerning agentic AI, the future of AI in cybersecurity or German cybersecurity startups.",
+      "evidence": "revel8's events page lists a TUM.ai Agentic AI Hackathon in Munich alongside OpenAI, Make, ElevenLabs, Zauber, Celonis and CDTM, a Conf3rence discussion about AI in cybersecurity, and revel8's finalist status for the 'Best German IT-startup' award.",
+      "confidence": "medium"
+    },
+    {
+      "rank": 5,
+      "topic": "B2B SaaS go-to-market partnerships",
+      "pretext": "A founder/operator exchange or partnership approach about scaling enterprise B2B SaaS, building sales motions and aligning product-market fit with emerging security threats.",
+      "evidence": "His CEO bio explicitly describes expertise in cybersecurity go-to-market strategy and a track record in scaling B2B SaaS, building sales motions and aligning product-market fit with security challenges.",
+      "confidence": "medium"
+    }
+  ],
+  "verified_facts": [
+    "Julius Muth is Co-Founder & CEO at revel8; his company bio focuses on cybersecurity go-to-market, AI-driven phishing, deepfakes, social engineering and B2B SaaS scaling. Source: https://www.revel8.ai/author-julius",
+    "revel8 GmbH, formerly Company Shield, is described as an AI-native security awareness and human risk management platform founded in Munich, Germany in 2024. Source: https://www.revel8.ai/grounding",
+    "The revel8 Platform runs continuous multi-channel attack simulations across email, SMS, WhatsApp, voice/vishing, messenger and deepfake video; the grounding page also states German hosting on STACKIT sovereign cloud. Source: https://www.revel8.ai/grounding",
+    "revel8's events page labels NIS-2-Congress in Frankfurt as 'Next up' and documents Julius Muth's live demonstration of the latest vishing attacks at it-sa Expo 2025 in Nuremberg. Source: https://revel8-f04e95.webflow.io/de/events",
+    "Julius Muth and Jasper Albrecht were listed for the September 19, 2025 German webinar 'Die Salesforce-Attacke: Awareness bei Vishing-Angriffen'. Source: https://revel8-f04e95.webflow.io/de/events",
+    "Julius's author page lists 'Vishing 101: How to Protect from AI Voice Phishing' dated October 31, 2025 and several CISO Portraits, including the Dr. Daniel Schatz article dated January 30, 2026. Source: https://www.revel8.ai/author-julius",
+    "The events page says revel8 was a finalist for the 'Best German IT-startup' award at the German IT Security Congress 2025; it does not state that revel8 won. Source: https://revel8-f04e95.webflow.io/de/events"
+  ],
+  "wrong_fact_traps": [
+    {
+      "field": "funding",
+      "trap": "Quoting a total funding amount or treating the Crunchbase scrape as evidence for a specific figure.",
+      "correct": "The accepted Crunchbase evidence obfuscates Total Funding, so no funding amount is validated."
+    },
+    {
+      "field": "founding date",
+      "trap": "Inferring a founding year from Crunchbase or claiming that no founding year is available anywhere in the accepted evidence.",
+      "correct": "Crunchbase's Founded field is obfuscated, but revel8's grounding page explicitly states that the company was founded in Munich in 2024."
+    },
+    {
+      "field": "company name",
+      "trap": "Using Company Shield as the current company name or treating it as a separate current employer.",
+      "correct": "The current legal name supplied by the grounding page is revel8 GmbH, formerly Company Shield."
+    },
+    {
+      "field": "location",
+      "trap": "Treating Frankfurt, Nuremberg, Berlin or Dortmund as Julius's base, or treating the requested search-location metadata as evidence.",
+      "correct": "Munich is supported as revel8's founding and company-location anchor; the other cities are event locations. The evidence does not establish Julius's personal residence."
+    },
+    {
+      "field": "title / wrong-person attribution",
+      "trap": "Calling Julius a CISO or transferring roles and biographical details from Jasper Albrecht, Jennifer Schneider or the CISO Portrait subjects to him.",
+      "correct": "Julius Muth is Co-Founder & CEO at revel8. The other named people are separate individuals, and the CISO Portraits are articles listed on his author page."
+    },
+    {
+      "field": "award",
+      "trap": "Saying that Julius personally won 'Best German IT-startup' or that revel8 won the award.",
+      "correct": "The events page says revel8 was a finalist at the German IT Security Congress 2025; neither an individual award nor a win is stated."
+    },
+    {
+      "field": "event recency",
+      "trap": "Presenting the 2025 webinar, it-sa Expo 2025 or GITEX Europe June 2025 as the expressly upcoming activity.",
+      "correct": "Those are dated 2025 items. Only NIS-2-Congress in Frankfurt is explicitly labeled 'Next up' on the supplied events page, with no date provided."
+    },
+    {
+      "field": "location",
+      "trap": "field=location; values=Berlin; trap=does not match the requested location; record quarantined. Requested location: Munich,Bavaria,Germany. Do not assert the conflicting place as the target's current location. Source: https://www.revel8.ai/blog/revel8-secures-eu7-million-to-fight-ai-powered-cyberattacks",
+      "correct": "Use only accepted identity evidence; the conflicting value remains unverified."
+    },
+    {
+      "field": "location",
+      "trap": "field=location; values=Berlin; trap=does not match the requested location; record quarantined. Requested location: Munich,Bavaria,Germany. Do not assert the conflicting place as the target's current location. Source: https://www.startbase.com/news/revel8-mit-7-millionen-euro-seed-gegen-zur-abwehr-von-ki-cyberangriffen-erfolgreich/",
+      "correct": "Use only accepted identity evidence; the conflicting value remains unverified."
+    },
+    {
+      "field": "location",
+      "trap": "field=location; values=Berlin; trap=does not match the requested location; record quarantined. Requested location: Munich,Bavaria,Germany. Do not assert the conflicting place as the target's current location. Source: https://www.crunchbase.com/person/julius-muth",
+      "correct": "Use only accepted identity evidence; the conflicting value remains unverified."
+    },
+    {
+      "field": "identity",
+      "trap": "field=identity; values=; trap=same-name record lacked target-company corroboration and was quarantined; never transfer its facts or alternative affiliations to the target. Source: https://www.wavestone.com/wp-content/uploads/2026/07/german_cybersecurity_startup_radar_2026.pdf",
+      "correct": "Use only accepted identity evidence; the conflicting value remains unverified."
+    }
+  ],
+  "top_pick": "Lead with AI vishing and deepfake awareness, followed by NIS-2 Congress networking. The first has the strongest repeated support across his bio, writing, webinar and live demonstration; the second is the only event explicitly labeled 'Next up', making it the best recency-based professional hook."
+}

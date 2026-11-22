@@ -1,0 +1,16 @@
+{
+  "target": {
+    "name": "Tom Müller",
+    "company": "revel8",
+    "role": "Co-Founder",
+    "location": "Munich,Bavaria,Germany",
+    "country": "DE"
+  },
+  "ranked_topics": [],
+  "verified_facts": [],
+  "wrong_fact_traps": [],
+  "top_pick": "",
+  "research_status": "thin_footprint",
+  "research_confidence": "low",
+  "degraded_reason": "no_accepted_identity_evidence"
+}

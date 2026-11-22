@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>revel8 — Run Replay</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="appbar">
+  <div class="appbar-left">
+    <div class="logo">R8</div>
+    <div>
+      <h1>Run Replay</h1>
+      <div class="subtitle">revel8 · Agentic Social Engineer · START Hack 2026</div>
+    </div>
+  </div>
+  <div class="appbar-controls">
+    <button id="btn-open" class="btn primary" title="Open one or more trace files (.jsonl / .json)">Open trace…</button>
+    <button id="btn-sample" class="btn" title="Render the bundled sample session">Load sample</button>
+    <button id="btn-playbook" class="btn" title="Open a playbook.json (cross-session memory, D-P)">Open playbook…</button>
+    <input type="file" id="file-input" accept=".jsonl,.json,application/json" multiple hidden>
+    <input type="file" id="playbook-input" accept=".json,application/json" hidden>
+  </div>
+</header>
+
+<div id="drop-hint" class="drop-hint" hidden>Drop trace / playbook files to load them</div>
+
+<section id="remote-traces" class="remote-traces" hidden>
+  <span class="remote-label">Sessions found in <code id="remote-dir-label"></code>:</span>
+  <span id="remote-list"></span>
+</section>
+
+<section id="session-bar" class="session-bar" hidden>
+  <div class="session-picker">
+    <label for="session-select">Session</label>
+    <select id="session-select"></select>
+  </div>
+  <div id="session-meta" class="session-meta"></div>
+</section>
+
+<section id="summary" class="summary" hidden></section>
+
+<div id="scrub-bar" class="scrub-bar" hidden>
+  <button id="btn-play" class="btn small" title="Replay the session turn by turn">▶ Play</button>
+  <input type="range" id="scrub-range" min="0" max="0" value="0" step="1">
+  <span id="scrub-label" class="scrub-label"></span>
+</div>
+
+<main id="main" class="main" hidden>
+  <nav id="timeline" class="timeline" aria-label="Touch timeline"></nav>
+  <section id="detail" class="detail" aria-live="polite"></section>
+</main>
+
+<section id="playbook-panel" class="playbook-panel" hidden></section>
+
+<div id="empty-state" class="empty-state">
+  <div class="empty-card">
+    <h2>Turn-by-turn run replay</h2>
+    <p>
+      This viewer renders a scoring or practice run from the agent's per-touch trace
+      (<strong>D-Q</strong>) and the cross-session playbook (<strong>D-P</strong>).
+      It reads local files only — no network, no API, nothing leaves this page.
+    </p>
+    <ul>
+      <li><strong>Open trace…</strong> — pick a <code>.jsonl</code> session trace from <code>agent/traces/</code> (multi-select works), or drag &amp; drop files anywhere on this page.</li>
+      <li><strong>Open playbook…</strong> — pick <code>agent/playbook.json</code> to see cross-session memory.</li>
+      <li><strong>Load sample</strong> — render the bundled sample session to preview the layout.</li>
+      <li>Serve the project root (<code>python3 -m http.server 8123</code>) and open <code>/dashboard/</code> to get a clickable list of <code>agent/traces/</code> automatically, or deep-link with <code>?trace=../agent/traces/&lt;file&gt;.jsonl</code>.</li>
+    </ul>
+    <p class="kbd-hint">Scrub with ← / → arrow keys once a session is loaded.</p>
+  </div>
+</div>
+
+<footer class="appfoot">
+  Local viewer · reads <code>agent/traces/*.jsonl</code> (D-Q) + <code>agent/playbook.json</code> (D-P) · zero dependencies · no network calls
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

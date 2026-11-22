@@ -1,0 +1,12 @@
+.git
+**/node_modules
+**/.next
+**/.turbo
+**/*.tsbuildinfo
+**/.env
+**/.env.*
+!**/.env.example
+!**/.env.compose.example
+.revel8
+.pnpm-store
+.test-tmp

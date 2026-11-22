@@ -1,0 +1,139 @@
+# One-command local revel8 control room. Secrets are read from the root .env
+# for interpolation only; no secret file is copied into an image or container.
+
+x-agent-env: &agent-env
+  REVEL8_PROJECT_ROOT: /project
+  REVEL8_PYTHON: python3
+  REVEL8_API_BASE: ${REVEL8_API_BASE:?Set REVEL8_API_BASE in the root .env}
+  REVEL8_TEAM_KEY: ${REVEL8_TEAM_KEY:?Set REVEL8_TEAM_KEY in the root .env}
+  WRITER_BASE_URL: ${WRITER_BASE_URL:?Set WRITER_BASE_URL in the root .env}
+  WRITER_API_KEY: ${WRITER_API_KEY:?Set WRITER_API_KEY in the root .env}
+  PLANNER_BASE_URL: ${PLANNER_BASE_URL:-}
+  PLANNER_API_KEY: ${PLANNER_API_KEY:-}
+  OSINT_BACKEND: ${OSINT_BACKEND:-firecrawl}
+  FIRECRAWL_API_KEY: ${FIRECRAWL_API_KEY:-}
+  TAVILY_API_KEY: ${TAVILY_API_KEY:-}
+  EXA_API_KEY: ${EXA_API_KEY:-}
+  SERPER_API_KEY: ${SERPER_API_KEY:-}
+
+services:
+  convex:
+    # Multi-arch image index pinned on 2026-11-21; keep admin-key parsing stable.
+    image: ghcr.io/convex/convex-backend@sha256:d4e012c68640830310139632481f8d1c1915bdf66de5c3a594a99799eab51679
+    restart: unless-stopped
+    stop_grace_period: 10s
+    stop_signal: SIGINT
+    entrypoint: ["/bin/sh", "-c"]
+    command:
+      - >-
+        set -eu;
+        key_file=/convex/data/revel8-admin-key;
+        ./run_backend.sh & backend_pid=$!;
+        trap 'kill -INT "$$backend_pid" 2>/dev/null || true' INT TERM;
+        until curl -fsS http://localhost:3210/version >/dev/null 2>&1; do
+          if ! kill -0 "$$backend_pid" 2>/dev/null; then wait "$$backend_pid"; exit 1; fi;
+          sleep 1;
+        done;
+        valid_key() {
+          [ -f "$$key_file" ] && [ "$$(grep -Ec '^[^[:space:]]+\|[^[:space:]]+$$' "$$key_file")" -eq 1 ] && [ "$$(wc -l < "$$key_file")" -eq 1 ];
+        };
+        if ! valid_key; then
+          ./generate_admin_key.sh | grep -E '^[^[:space:]]+\|[^[:space:]]+$$' | tail -n1 > "$$key_file.tmp";
+          [ -s "$$key_file.tmp" ];
+          chmod 600 "$$key_file.tmp";
+          mv "$$key_file.tmp" "$$key_file";
+        fi;
+        wait "$$backend_pid"
+    environment:
+      CONVEX_CLOUD_ORIGIN: http://127.0.0.1:3210
+      CONVEX_SITE_ORIGIN: http://127.0.0.1:3211
+      DISABLE_METRICS_ENDPOINT: "true"
+    volumes:
+      - convex_data:/convex/data
+    ports:
+      - "127.0.0.1:3210:3210"
+      - "127.0.0.1:3211:3211"
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://localhost:3210/version"]
+      interval: 5s
+      timeout: 3s
+      retries: 30
+      start_period: 10s
+
+  sidecar:
+    build:
+      context: ./sidecar
+    image: revel8-sidecar:latest
+    working_dir: /project/sidecar
+    environment:
+      <<: *agent-env
+      PORT: "8787"
+    volumes:
+      - ./agent:/project/agent
+    ports:
+      - "127.0.0.1:8787:8787"
+    command: python app.py
+    restart: unless-stopped
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - "import urllib.request; urllib.request.urlopen('http://localhost:8787/api/health')"
+      interval: 5s
+      timeout: 3s
+      retries: 20
+      start_period: 5s
+
+  web:
+    build:
+      context: ./control-room
+      args:
+        NEXT_PUBLIC_CONVEX_URL: ${NEXT_PUBLIC_CONVEX_URL:-http://127.0.0.1:3210}
+        NEXT_PUBLIC_CONVEX_SITE_URL: ${NEXT_PUBLIC_CONVEX_SITE_URL:-http://127.0.0.1:3211}
+        NEXT_PUBLIC_REVEL8_SIDECAR: ${NEXT_PUBLIC_REVEL8_SIDECAR:-http://localhost:8787}
+    image: revel8-control-room:latest
+    depends_on:
+      convex:
+        condition: service_healthy
+      sidecar:
+        condition: service_healthy
+    environment:
+      <<: *agent-env
+      CONVEX_URL: http://convex:3210
+      CONVEX_SITE_URL: http://convex:3211
+      # Browser URLs are embedded at build time; server-side Convex calls use service DNS.
+      NEXT_PUBLIC_CONVEX_URL: http://convex:3210
+      NEXT_PUBLIC_CONVEX_SITE_URL: ${NEXT_PUBLIC_CONVEX_SITE_URL:-http://127.0.0.1:3211}
+      NEXT_PUBLIC_REVEL8_SIDECAR: ${NEXT_PUBLIC_REVEL8_SIDECAR:-http://localhost:8787}
+      NEXT_TELEMETRY_DISABLED: "1"
+      SITE_URL: ${SITE_URL:-http://localhost:3000}
+      BETTER_AUTH_SECRET: ${BETTER_AUTH_SECRET:?Set BETTER_AUTH_SECRET in the root .env}
+      REVEL8_INGEST_SECRET: ${REVEL8_INGEST_SECRET:?Set REVEL8_INGEST_SECRET in the root .env}
+      ADMIN_EMAIL: ${ADMIN_EMAIL:?Set ADMIN_EMAIL in the root .env}
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD:?Set ADMIN_PASSWORD in the root .env}
+      ADMIN_NAME: ${ADMIN_NAME:-revel8 Admin}
+      RESEND_API_KEY: ${RESEND_API_KEY:-}
+      REVEL8_MODEL_SETTINGS: /revel8-settings/model-selection.json
+      REVEL8_FLOW_STATE_DIR: /revel8-settings/flows
+    volumes:
+      - ./agent:/project/agent
+      - convex_data:/convex-data:ro
+      - revel8_model_settings:/revel8-settings
+    ports:
+      - "127.0.0.1:3000:3000"
+    restart: unless-stopped
+    healthcheck:
+      test:
+        - CMD
+        - node
+        - -e
+        - "fetch('http://127.0.0.1:3000/sign-in').then(r=>{if(!r.ok)process.exit(1)}).catch(()=>process.exit(1))"
+      interval: 10s
+      timeout: 5s
+      retries: 20
+      start_period: 60s
+
+volumes:
+  convex_data:
+  revel8_model_settings:

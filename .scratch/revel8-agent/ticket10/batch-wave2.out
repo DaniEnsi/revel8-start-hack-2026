@@ -1,0 +1,9 @@
+running 7 sessions with 2 workers
+[done] D1: outcome=dead_air touches=5 incident=False wall=17.6m
+[done] T1: outcome=dead_air touches=6 incident=False wall=20.3m
+[done] A3: outcome=None touches=None incident=False wall=2.0m
+[done] B2: outcome=None touches=None incident=False wall=4.8m
+[done] C2: outcome=incident touches=5 incident=True wall=13.9m
+[done] G1: outcome=budget_exhausted touches=5 incident=False wall=15.2m
+[done] C3: outcome=budget_exhausted touches=8 incident=False wall=19.0m
+batch complete

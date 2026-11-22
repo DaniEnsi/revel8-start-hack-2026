@@ -1,0 +1,89 @@
+{
+  "status": "partial_offline_diagnostic",
+  "actual_planner_comparison": {
+    "planned_trials": 24,
+    "executed_trials": 0,
+    "decision_object_rates": null,
+    "action_channel_legality": null,
+    "json_recovery_rates": null,
+    "latency_ms": null,
+    "model_recommendation": null
+  },
+  "external_model_calls": 0,
+  "target_api_calls": 0,
+  "trace_evidence": {
+    "matching_trace_records": 12,
+    "traces": [
+      {
+        "path": "agent/traces/s_83fb4fae3b.jsonl",
+        "matching_trace_records": 4
+      },
+      {
+        "path": "agent/traces/s_d7f06e4ee6.jsonl",
+        "matching_trace_records": 4
+      },
+      {
+        "path": "agent/traces/s_c637aad3ac.jsonl",
+        "matching_trace_records": 4
+      }
+    ],
+    "raw_primary_payload_available_in_matching_records": false
+  },
+  "prior_policy_suite": {
+    "path": "research/scenario-sweep-results.json",
+    "model": "kimi-k3.1",
+    "suite": "channel_policy",
+    "cases": 6,
+    "schema_valid": 6,
+    "expectation_met": 6,
+    "scope": "Fixed synthetic channel-policy decisions with a different output contract."
+  },
+  "offline_checks": [
+    {
+      "case": "strict_json_decision",
+      "decision_object_accepted": true,
+      "recovery_observed": false,
+      "repair_attempted": false,
+      "mock_chat_calls": 1,
+      "error": null,
+      "expected_behavior_observed": true
+    },
+    {
+      "case": "fenced_json_decision",
+      "decision_object_accepted": true,
+      "recovery_observed": true,
+      "repair_attempted": false,
+      "mock_chat_calls": 1,
+      "error": null,
+      "expected_behavior_observed": true
+    },
+    {
+      "case": "unparseable_then_repaired",
+      "decision_object_accepted": true,
+      "recovery_observed": true,
+      "repair_attempted": true,
+      "mock_chat_calls": 2,
+      "error": null,
+      "expected_behavior_observed": true
+    },
+    {
+      "case": "parseable_missing_decision",
+      "decision_object_accepted": false,
+      "recovery_observed": false,
+      "repair_attempted": false,
+      "mock_chat_calls": 1,
+      "error": "invalid structured output: missing/non-dict decision",
+      "expected_behavior_observed": true
+    },
+    {
+      "case": "parseable_non_dict_decision",
+      "decision_object_accepted": false,
+      "recovery_observed": false,
+      "repair_attempted": false,
+      "mock_chat_calls": 1,
+      "error": "invalid structured output: missing/non-dict decision",
+      "expected_behavior_observed": true
+    }
+  ],
+  "conclusion": "JSON repair runs on extraction failure. The observed error is raised after extraction returns a dictionary whose decision field is absent or is not a dictionary. The traces do not preserve the rejected payload, so the model-side cause is undetermined."
+}
