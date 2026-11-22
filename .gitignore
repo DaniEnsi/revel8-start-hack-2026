@@ -33,3 +33,10 @@ out/
 # OS and local logs
 .DS_Store
 *.log
+
+# Local pitch video exports and production files
+/.scratch/sol-video/
+/research/revel8-demo*.mp4
+/research/revel8-demo-src/
+/research/revel8-product-demo*.mp4
+/research/revel8-product-demo-4k-src/
